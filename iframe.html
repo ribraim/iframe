@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Accessibility Code for "rodrigoibraim.com.br" -->
+<script>
+/*
+
+Want to customize your button? visit our documentation page:
+
+https://login.equalweb.com/custom-button.taf
+
+*/
+window.interdeal = {
+    "sitekey": "b597f502873e8b574e735546d0e1ee95",
+    "Position": "left",
+    "domains": {
+        "js": "https://cdn.equalweb.com/",
+        "acc": "https://access.equalweb.com/"
+    },
+    "Menulang": "EN",
+    "btnStyle": {
+        "vPosition": [
+            "20%",
+            "80%"
+        ],
+        "scale": [
+            "0.5",
+            "0.5"
+        ],
+        "color": {
+            "main": "#1c4bb6",
+            "second": "#ffffff"
+        },
+        "icon": {
+            "outline": false,
+            "type": 1,
+            "shape": "circle"
+        }
+    }
+};
+(function(doc, head, body){
+    var coreCall             = doc.createElement('script');
+    coreCall.src             = interdeal.domains.js + 'core/5.0.9/accessibility.js';
+    coreCall.defer           = true;
+    coreCall.integrity       = 'sha512-dxjHZQgpVIG70EQus4+1KR3oj2KGyrtwR/nr4lY+tcMjrQ1Yb9V1SCKNVLGhD3CcPMgANKAqOk4ldI8WWNnQTw==';
+    coreCall.crossOrigin     = 'anonymous';
+    coreCall.setAttribute('data-cfasync', true );
+    body? body.appendChild(coreCall) : head.appendChild(coreCall);
+})(document, document.head, document.body);
+</script>
+</head>
+<body>
+  <h1>Parent</h1>
+  
+  <h2>Main Heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    <h3>Subheading Level 1</h3>
+    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <h4>Subheading Level 2</h4>
+    <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
+    
+  <iframe id="child" src="con.html" title="Iframe Example" style="width: 100%; height: 500px;"></iframe>
+  <script>
+    window.onload = function() {
+      var child = document.getElementById('child');
+      const childWindow = child.contentWindow;
+      childWindow.babyTalk('Baby shark');
+
+      const childDocument = child.contentDocument || childWindow.document;
+      const iframeBody = childDocument.body;
+      iframeBody.style.backgroundColor = 'lightblue';
+    };
+  </script>
+</body>
+</html>
